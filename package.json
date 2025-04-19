@@ -4,7 +4,8 @@
   "main": "index.js",
   "scripts": {
     "test": "npx playwright test",
-    "report": "npx playwright show-report"
+    "report": "npx playwright show-report",
+    "setup": "npx playwright install"
   },
   "keywords": [],
   "author": "Adrian Filip",
