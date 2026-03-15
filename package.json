@@ -3,9 +3,17 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "npx playwright test",
-    "report": "npx playwright show-report",
-    "setup": "npx playwright install"
+    "test": "playwright test",
+    "test:e2e": "playwright test tests/e2e",
+    "test:api": "playwright test tests/api",
+    "test:visual": "playwright test tests/visual",
+    "test:smoke": "playwright test --grep @smoke",
+    "test:regression": "playwright test --grep @regression",
+    "test:headed": "playwright test --headed",
+    "test:debug": "playwright test --debug",
+    "test:ui": "playwright test --ui",
+    "report": "playwright show-report",
+    "type-check": "tsc --noEmit"
   },
   "keywords": [],
   "author": "Adrian Filip",
@@ -13,10 +21,13 @@
   "description": "",
   "devDependencies": {
     "@playwright/test": "^1.52.0",
+    "@types/dotenv": "^6.1.1",
     "@types/node": "^22.14.1"
   },
   "dependencies": {
+    "@faker-js/faker": "^10.3.0",
     "chalk": "^5.4.1",
+    "dotenv": "^17.3.1",
     "playwright": "^1.52.0"
   }
 }
